@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Application Form</h1>
+    <p><b>Please fill in this form to create an account.</b></p>
+    <hr>
+
+<label ><b>UserName </b></label>
+<input type="text" name="firstname" size="15"/> <br>
+
+
+
+<label ><b>Birth Date </b></label> &nbsp;&nbsp; &nbsp;&nbsp;
+    <input id="bdate" type="date" name="dob" />
+    <i class="fas fa-calendar-alt"></i>   <br><br><br>
+
+<label><b>Gender </b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="male"/> Male &nbsp;&nbsp;
+    <input type="radio" name="female"/> Female&nbsp;&nbsp;
+    <input type="radio" name="other"/> Other  <br><br>
+
+
+<label><b>Phone </b></label>
+    <input type="text" name="country code"  value="+91" size="2"/>
+
+
+
+<label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+<br><br>
+
+<label ><b>Address</b></label>
+<br>
+<textarea cols="80" rows="5" value="address">
+</textarea>
+<br> <br>
+
+  <label for="district"><b>District:</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="district" name="district">
+            <option value="Ernakulam">Ernakulam</option>
+            <option value="Kottayam">Kottayam</option>
+            <option value="Thrissur">Thrissur</option>
+            <option value="Kozhikode">Kozhikode</option>
+            <option value="Kozhikode">Kollam</option>
+        </select>
+<br> <br>
+
+<label for="branch"><b>Bank Branch</b></label>
+    <input type="text" placeholder="Enter Branch" name="branch" id="branch" required>
+<br> <br>
+
+
+<label for="account-type"><b>Account type:</b></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select id="account-type" name="account-type">
+        <option value="savings">Savings account</option>
+        <option value="current">Current account</option>
+        <option value="fixed">Fixed deposit</option>
+        <option value="recurring">Recurring deposit</option>
+  </select>
+<br> <br>
+
+  <label for="materials">Materials provided:</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="debit-card" name="debit-card" value="Debit card">
+                            <label for="debit-card">Debit card</label>
+            <input type="checkbox" id="credit-card" name="credit-card" value="Credit card">
+                            <label for="credit-card">Credit card</label>
+             <input type="checkbox" id="cheque-book" name="cheque-book" value="Cheque book">
+                            <label for="cheque-book">Cheque book</label>
+<br> <br>
+
+<center>
+<a href="{% url 'sucess' %}" class="btn btn-warning">Submit</a>
+    <a href="{% url 'logout' %}" class="btn btn-warning">Logout</a>
+
+
+
+</center>
+
+</body>
+</html>
